@@ -6,7 +6,7 @@ const CoinItem = (props) => {
     <div className={styles.coin_row}>
       <p>{props.coins.market_cap_rank}</p>
       <div className={styles.imgSymbol}>
-        <img src={props.coins.image} alt="" width="auto" height={40} justify-content="betwent"/>
+        <img src={props.coins.image} alt="" className={styles.img} />
         <p>{props.coins.symbol.toUpperCase()}</p>
       </div>
       <p>${props.coins.current_price.toLocaleString()}</p>
