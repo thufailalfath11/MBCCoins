@@ -53,13 +53,13 @@ const Hero = () => {
       <section className="hero-sec">
         <div className="container">
           <div className="heading-title">
-            <TitleLogo caption="The last digital agency you ll ever need" />
+            <TitleLogo caption="Agensi digital terakhir yang Anda perlukan" />
             <p>
-              A cryptocurrency is a digital currency, which is an alternative
-              form of payment created using encryption algorithms. The use of
-              encryption technologies means that cryptocurrencies function both
-              as a currency and as a virtual accounting system. To use
-              cryptocurrencies, you need a cryptocurrency wallet.
+              Cryptocurrency adalah mata uang digital yang merupakan alternatif
+              bentuk pembayaran yang dibuat menggunakan algoritma enkripsi. Penggunaan
+              teknologi enkripsi berarti cryptocurrency berfungsi keduanya
+              sebagai mata uang dan sebagai sistem akuntansi virtual. Menggunakan
+              cryptocurrency, Anda memerlukan dompet cryptocurrency.
             </p>
           </div>
           {/* <Coins />

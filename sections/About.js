@@ -1,9 +1,6 @@
-import Banner from "@/components/Banner";
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion'; 
 import { useInView } from 'react-intersection-observer';
-import Brand from "@/components/Brand";
-import Testimonial from "@/components/Testimonial";
 import { Title, TitleLogo, TitleSm } from "@/components/common/Title";
 
 const About = () => {
@@ -52,7 +49,7 @@ const About = () => {
               variants={motionVariantsA}
               ref={motionRef}
             >
-              <TitleSm title='ABOUT US' /> <br />
+              <TitleSm title='Tentang Kami' /> <br />
               <br />
               <TitleLogo caption='MBCcoins: Menghadirkan Revolusi Keuangan Digital' className='title-bg' />
             </motion.div>

@@ -12,32 +12,33 @@ const Contact = () => {
       <section className='contact bg-top'>
         <div className='container'>
           <div className='heading-title'>
-            <TitleSm title='CONTACT' /> <br />
+            <TitleSm title='KONTAK' /> <br />
             <br />
-            <TitleLogo caption="Let's start right now!" className='title-bg' />
+            <TitleLogo caption="Mari mulai bersama kami sekarang!" className='title-bg' />
           </div>
           <div className='content py flex1'>
             <div className='left w-30'>
-              <div className='contact-deatils'>
+              <div className='Detail Kontak'>
                 <div className='box'>
                   <FiHeadphones size={30} className='icons' />
                   <h3>1-001-234-5678</h3>
-                  <span>Call us: Mon - Fri 9:00 - 19:00</span>
+                  <span>Hubungi Kami: Senin -  Jum'at 9:00 - 19:00</span>
                 </div>
                 <div className='box'>
                   <IoLocationOutline size={30} className='icons' />
                   <h3>Bandung Indonesia</h3>
-                  <span>Telkom University, TULT, 13th Floor, MBC Laboratory</span>
+                  <span>Telkom University, TULT, Lantai 13.04, MBC Laboratorium</span>
                 </div>
                 <div className='box'>
                   <FiHelpCircle size={30} className='icons' />
                   <h3>info@dream-theme.com</h3>
-                  <span>Drop us a line anytime!</span>
+                  <span>Hubungi kami kapan saja!</span>
                 </div>
                 <div className='box'>
                   <BiUserCircle size={30} className='icons' />
                   <h3>hr@dream-theme.com</h3>
-                  <span>Career at Seven Creative</span>
+                  <span>
+                    Karier di MBCcoins</span>
                 </div>
               </div>
               <ul>
@@ -56,13 +57,13 @@ const Contact = () => {
               </ul>
             </div>
             <div className='right w-70'>
-              <TitleSm title='Make an online enquiry' />
-              <p className='desc-p'>Got questions? Ideas? Fill out the form below to get our proposal. </p>
+              <TitleSm title='Buat pertanyaan dalam versi online' />
+              <p className='desc-p'>Ada pertanyaan? Ide ide? Isi formulir di bawah ini untuk mendapatkan proposal kami.</p>
 
               <form>
                 <div className='grid-2'>
                   <div className='inputs'>
-                    <span>Name</span>
+                    <span>Nama</span>
                     <input type='text' />
                   </div>
                   <div className='inputs'>
@@ -72,16 +73,16 @@ const Contact = () => {
                 </div>
                 <div className='grid-2'>
                   <div className='inputs'>
-                    <span>your budget</span>
+                    <span>Anggaran kamu</span>
                     <input type='text' />
                   </div>
                   <div className='inputs'>
-                    <span>timeframe</span>
+                    <span>jangka waktu</span>
                     <input type='text' />
                   </div>
                 </div>
                 <div className='inputs'>
-                  <span>TELL US A BIT ABOUT YOUR PROJECT*</span>
+                  <span>BERITAHU KAMI SEDIKIT TENTANG PROYEK ANDA*</span>
                   <textarea cols='30' rows='10'></textarea>
                 </div>
                 <button className='button-primary'>Submit</button>

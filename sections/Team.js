@@ -14,9 +14,9 @@ const Team = () => {
       <section className='agency bg-top' ref={bagiancs}>
         <div className='container'>
           <div className='heading-title'>
-            <TitleSm title='MEET OUR CYBERSECURITY TEAM' /> <br />
+            <TitleSm title='TEMUI TIM KEAMANAN SIBER KAMI' /> <br />
             <br />
-            <TitleLogo caption="A team of smart & passionate creatives" className="title-bg" />
+            <TitleLogo caption="Sebuah tim kreatif yang cerdas & bersemangat" className="title-bg" />
           </div>
           <motion.div
             initial={{ opacity: 0, z: -100 }}
@@ -36,7 +36,7 @@ const Team = () => {
             <TitleSm title='MEET OUR BIG DATA TEAM' />
             <br />
             <br />
-            <TitleLogo caption='Another team of talented individuals' className='title-bg' />
+            <TitleLogo caption='Tim lain yang terdiri dari individu-individu berbakat' className='title-bg' />
           </div>
           <motion.div
             initial={{ opacity: 0, z: -100 }}

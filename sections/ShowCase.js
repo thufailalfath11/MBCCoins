@@ -11,7 +11,7 @@ const ShowCase = () => {
           <div className="heading-title">
             <TitleSm title="Analysis" /> <br />
             <br />
-            <Title title="Cryptocurrency Analysis data." className="title-bg" />
+            <Title title="Data Analisis Mata Uang Kripto." className="title-bg" />
           </div>
           <br />
           <br />
