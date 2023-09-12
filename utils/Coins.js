@@ -16,7 +16,7 @@ const Coins = (props) => {
           <p className={styles.hide_mobile}>Market Cap</p>
         </div>
         {props.coins.map((coin) => (
-          <Link href={`/coin/${coin.id}`} key={coin.id}>
+          <Link href={`/coin/${coin.id}`}>
               <CoinItem coins={coin} />
           </Link>
         ))}
