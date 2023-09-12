@@ -31,23 +31,23 @@ const Coin = ({ coin }) => {
                 <div className={styles.content}>
                     <table className={styles.table}>
                         <thead>
-                            <tr>
-                                <th className={styles.th}>1h</th>
-                                <th className={styles.th}>24h</th>
-                                <th className={styles.th}>7d</th>
-                                <th className={styles.th}>14d</th>
-                                <th className={styles.th}>30d</th>
-                                <th className={styles.th}>1yr</th>
+                            <tr className={styles.th}>
+                                <th >1h</th>
+                                <th className={styles.hide_mobile}>24h</th>
+                                <th >7d</th>
+                                <th className={styles.hide_mobile}>14d</th>
+                                <th >30d</th>
+                                <th >1yr</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td className={styles.td}>{coin.market_data?.price_change_percentage_1h_in_currency ? <p>{coin.market_data.price_change_percentage_1h_in_currency.usd.toFixed(1)}%</p> : null}</td>
-                                <td className={styles.td}>{coin.market_data?.price_change_percentage_24h_in_currency ? <p>{coin.market_data.price_change_percentage_24h_in_currency.usd.toFixed(1)}%</p> : null}</td>
-                                <td className={styles.td}>{coin.market_data?.price_change_percentage_24h_in_currency ? <p>{coin.market_data.price_change_percentage_7d_in_currency.usd.toFixed(1)}%</p> : null}</td>
-                                <td className={styles.td}>{coin.market_data?.price_change_percentage_24h_in_currency ? <p>{coin.market_data.price_change_percentage_14d_in_currency.usd.toFixed(1)}%</p> : null}</td>
-                                <td className={styles.td}>{coin.market_data?.price_change_percentage_24h_in_currency ? <p>{coin.market_data.price_change_percentage_30d_in_currency.usd.toFixed(1)}%</p> : null}</td>
-                                <td className={styles.td}>{coin.market_data?.price_change_percentage_24h_in_currency ? <p>{coin.market_data.price_change_percentage_1y_in_currency.usd.toFixed(1)}%</p> : null}</td>
+                            <tr className={styles.td}>
+                                <td >{coin.market_data?.price_change_percentage_1h_in_currency ? <p>{coin.market_data.price_change_percentage_1h_in_currency.usd.toFixed(1)}%</p> : null}</td>
+                                <td className={styles.hide_mobile}>{coin.market_data?.price_change_percentage_24h_in_currency ? <p>{coin.market_data.price_change_percentage_24h_in_currency.usd.toFixed(1)}%</p> : null}</td>
+                                <td >{coin.market_data?.price_change_percentage_24h_in_currency ? <p>{coin.market_data.price_change_percentage_7d_in_currency.usd.toFixed(1)}%</p> : null}</td>
+                                <td className={styles.hide_mobile}>{coin.market_data?.price_change_percentage_24h_in_currency ? <p>{coin.market_data.price_change_percentage_14d_in_currency.usd.toFixed(1)}%</p> : null}</td>
+                                <td >{coin.market_data?.price_change_percentage_24h_in_currency ? <p>{coin.market_data.price_change_percentage_30d_in_currency.usd.toFixed(1)}%</p> : null}</td>
+                                <td >{coin.market_data?.price_change_percentage_24h_in_currency ? <p>{coin.market_data.price_change_percentage_1y_in_currency.usd.toFixed(1)}%</p> : null}</td>
 
                             </tr>
                         </tbody>
