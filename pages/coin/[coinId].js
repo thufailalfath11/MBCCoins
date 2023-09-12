@@ -1,15 +1,13 @@
 import axios from 'axios';
-import styles from "@/utils/Styles.module.css"
+import styles from "./coinId.module.css"
 import DOMPurify from 'dompurify';
-import Navbar from '@/utils/Navbar';
 const Coin = ({ coin }) => {
   return (
     
     <div>
-        <Navbar/>
             <div className={styles.coin_container}>
                 <div className={styles.content}>
-                <h1>{coin.name}</h1>
+                <h1 className={styles.name}>{coin.name}</h1>
                 </div>
                 <div className={styles.content}>
                     <div className={styles.rank}>
