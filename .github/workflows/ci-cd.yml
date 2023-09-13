@@ -1,9 +1,9 @@
-name: next.js CI and Deploy
+name: Node.js CI and Deploy
 
 on:
   push:
     branches:
-      - Develop
+      - main
 
 jobs:
   build-and-deploy:
@@ -19,41 +19,15 @@ jobs:
       with:
         node-version: '18.17.1'
 
-    - name: Check if Docker Image Exists
-      id: check-image
-      run: |
-        if sudo docker inspect mbccoins-app > /dev/null 2>&1; then
-          echo "::set-output name=image_exists::true"
-        else
-          echo "::set-output name=image_exists::false"
-        fi
-
-    - name: Check if Docker Container Exists
-      id: check-container
-      run: |
-        if sudo docker inspect mbccoins-app-1 > /dev/null 2>&1; then
-          echo "::set-output name=container_exists::true"
-        else
-          echo "::set-output name=container_exists::false"
-        fi
-
-    - name: Stop and Remove Previous Docker Container (if exists)
+    - name: Stop and Remove Previous Docker Container
       uses: appleboy/ssh-action@v1.0.0
       with:
         host: 20.78.39.206
         username: MBCcoin
         password: tradingCoin123
         script: |
-          if [ "$CONTAINER_EXISTS" == "true" ]; then
-            sudo docker stop mbccoins-app-1 || true
-            sudo docker rm mbccoins-app-1 || true
-          fi
-          if [ "$IMAGE_EXISTS" == "true" ]; then
-            sudo docker rmi mbccoins-app || true
-          fi
-
-    - name: Clone Repository and Build
-      run: |
-        cd /home/MBCcoin/MBCCoins
-        sudo git pull origin Develop
-        sudo docker compose up --build -d
+          sudo docker stop MBCCoins-app-1 || true 
+          sudo docker rm MBCCoins-app-1 || true 
+          sudo docker rmi MBCCoins-app || true 
+          cd /home/MBCcoin/MBCCoins
+          git pull origin main && sudo docker compose up --build -d
