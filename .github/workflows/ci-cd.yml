@@ -3,7 +3,7 @@ name: next.js CI and Deploy
 on:
   push:
     branches:
-      - main
+      - Develop
 
 jobs:
   build-and-deploy:
