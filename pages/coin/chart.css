@@ -1,0 +1,60 @@
+/* CSS untuk Grafik */
+.chart-container {
+    width: 100%;
+    max-width: 800px; /* Sesuaikan lebar sesuai kebutuhan Anda */
+    margin: 0 auto;
+  }
+  
+  /* Gaya garis pada grafik */
+  .recharts-cartesian-axis-tick-line {
+    display: none; /* Sembunyikan garis sumbu x */
+  }
+  
+  /* Gaya label pada sumbu x dan y */
+  .recharts-cartesian-axis-label {
+    font-size: 12px;
+    fill: #555; /* Warna teks */
+  }
+  
+  /* Gaya garis grid pada sumbu y */
+  .recharts-cartesian-grid-horizontal line {
+    stroke: #eee; /* Warna garis grid */
+  }
+  
+  /* Gaya garis grafik */
+  .recharts-line-dash {
+    stroke: #007bff; /* Warna garis grafik */
+    stroke-width: 2px; /* Ketebalan garis grafik */
+  }
+  
+  /* Gaya tooltip */
+  .recharts-tooltip {
+    background-color: #fff; /* Warna latar belakang tooltip */
+    border: 1px solid #ddd; /* Garis batas tooltip */
+    padding: 8px; /* Ruang dalam tooltip */
+    font-size: 14px; /* Ukuran font teks tooltip */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan tooltip */
+  }
+  
+  /* Gaya teks dalam tooltip */
+  .recharts-tooltip-label {
+    color: #333; /* Warna teks dalam tooltip */
+    font-weight: bold; /* Tebal teks label */
+    margin-bottom: 4px; /* Ruang bawah label */
+  }
+  
+  /* Gaya nilai dalam tooltip */
+  .recharts-tooltip-item {
+    color: #007bff; /* Warna nilai dalam tooltip */
+    font-weight: bold; /* Tebal nilai dalam tooltip */
+  }
+  
+  /* Gaya sumbu y pada tooltip */
+  .recharts-tooltip-axis-y {
+    display: none; /* Sembunyikan nilai sumbu y dalam tooltip */
+  }
+  
+  /* Gaya garis vertikal dalam tooltip */
+  .recharts-tooltip-cursor {
+    fill: #007bff; /* Warna garis vertikal dalam tooltip */
+  }
