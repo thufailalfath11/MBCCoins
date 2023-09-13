@@ -3,7 +3,7 @@ name: Node.js CI and Deploy
 on:
   push:
     branches:
-      - main
+      - Develop
 
 jobs:
   build-and-deploy:
@@ -31,3 +31,4 @@ jobs:
           sudo docker rmi MBCCoins-app || true 
           cd /home/MBCcoin/MBCCoins
           git pull origin main && sudo docker compose up --build -d
+  
