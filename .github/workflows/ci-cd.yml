@@ -22,13 +22,12 @@ jobs:
     - name: Stop and Remove Previous Docker Container
       uses: appleboy/ssh-action@v1.0.0
       with:
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        host: 20.48.90.191
+        host: 20.78.39.206
         username: MBCcoin
         password: tradingCoin123
         port: 22
         script: |
-          sudo docker stop docker-tes-app-1 || true 
-          sudo docker rm docker-tes-app-1 || true 
-          sudo docker rmi docker-tes-app || true 
-          cd /home/MBCcoin/docker-tes && git pull origin main && sudo docker compose up --build -d
+          sudo docker stop  mbccoins-app-1 || true 
+          sudo docker rm  mbccoins-app-1 || true 
+          sudo docker rmi mbccoins-app || true 
+          cd cd MBCCoins && git pull origin main && sudo docker compose up --build -d
