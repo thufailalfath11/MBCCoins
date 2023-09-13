@@ -43,7 +43,6 @@ jobs:
         host: 20.78.39.206
         username: MBCcoin
         password: tradingCoin123
-        port: 22
         script: |
           if [ "$CONTAINER_EXISTS" == "true" ]; then
             sudo docker stop mbccoins-app-1 || true
