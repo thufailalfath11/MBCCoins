@@ -27,7 +27,7 @@ jobs:
         password: tradingCoin123
         port: 22
         script: |
-          sudo docker stop  mbccoins-app-1 || true 
-          sudo docker rm  mbccoins-app-1 || true 
-          sudo docker rmi mbccoins-app || true 
-          cd MBCCoins && git pull origin main && sudo docker compose up --build -d
+          sudo docker stop mbccoins-app-1 || true
+          sudo docker rm mbccoins-app-1 || true
+          sudo docker rmi mbccoins-app || true
+          cd MBCCoins && sudo git pull origin main && sudo docker compose up --build -d
