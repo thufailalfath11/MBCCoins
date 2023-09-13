@@ -19,7 +19,25 @@ jobs:
       with:
         node-version: '18.17.1'
 
-    - name: Stop and Remove Previous Docker Container
+    - name: Check if Docker Image Exists
+      id: check-image
+      run: |
+        if sudo docker inspect mbccoins-app > /dev/null 2>&1; then
+          echo "::set-output name=image_exists::true"
+        else
+          echo "::set-output name=image_exists::false"
+        fi
+
+    - name: Check if Docker Container Exists
+      id: check-container
+      run: |
+        if sudo docker inspect mbccoins-app-1 > /dev/null 2>&1; then
+          echo "::set-output name=container_exists::true"
+        else
+          echo "::set-output name=container_exists::false"
+        fi
+
+    - name: Stop and Remove Previous Docker Container (if exists)
       uses: appleboy/ssh-action@v1.0.0
       with:
         host: 20.78.39.206
@@ -27,7 +45,16 @@ jobs:
         password: tradingCoin123
         port: 22
         script: |
-          sudo docker stop mbccoins-app-1 || true
-          sudo docker rm mbccoins-app-1 || true
-          sudo docker rmi mbccoins-app || true
-          cd MBCCoins && sudo git pull origin main && sudo docker compose up --build -d
+          if [ "$CONTAINER_EXISTS" == "true" ]; then
+            sudo docker stop mbccoins-app-1 || true
+            sudo docker rm mbccoins-app-1 || true
+          fi
+          if [ "$IMAGE_EXISTS" == "true" ]; then
+            sudo docker rmi mbccoins-app || true
+          fi
+
+    - name: Clone Repository and Build
+      run: |
+        cd MBCCoins
+        sudo git pull origin Develop
+        sudo docker compose up --build -d
