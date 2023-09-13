@@ -7,6 +7,7 @@
 .icon {
     font-size: 2rem;
     color: #4deea3;
+    margin-right: 10px;
 }
 
 .purple {
@@ -82,3 +83,30 @@
 
 /* coin.js */
 
+.searchBarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Untuk memberikan jarak dari elemen di bawahnya */
+    margin-top: 30px;
+    
+  }
+  .button {
+    padding: 10px 20px;
+    background-color: #4deea3;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #08eb81;
+  }
+
+  .input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin-right: 6px;
+  }

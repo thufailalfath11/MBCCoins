@@ -5,12 +5,10 @@ import Link from 'next/link'
 
 const Navbar = () => {
     return (
-        <Link href='/'>
             <div className={styles.navbar}>
                 <FaCoins className={styles.icon} />
-                <h1> Coin <span className={styles.purple}>Search</span></h1>
+                <h1> Coin <span className={styles.purple}>Lists</span></h1>
             </div>
-        </Link>
     )
 }
 

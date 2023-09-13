@@ -110,8 +110,29 @@
 }
 
 
+.chart_container {
+    width: 100%;
+    max-width: 800px; /* Sesuaikan lebar sesuai kebutuhan Anda */
+    margin: 0 auto;
+  }
+  
 
+  .timeRangeButtons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .timeRangeButtons button {
+    background-color: #4deea3;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 20px;
+  }
 
-
-
-
+  .timeRangeButtons button:hover {
+    background-color: #00ff88;
+  }
