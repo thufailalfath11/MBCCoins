@@ -34,7 +34,7 @@ const Hero = () => {
             variants={motionVariants}
             ref={motionRef}
           >
-            <h1 className="hero-title">CRYPTOCURRENCY</h1>
+            <h1 className="hero-title">MBCXCYBER</h1>
           </motion.div>
           <div className="sub-heading">
             {/* <motion.div
