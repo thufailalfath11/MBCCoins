@@ -22,9 +22,9 @@ jobs:
     - name: Stop and Remove Previous Docker Container
       uses: appleboy/ssh-action@v1.0.0
       with:
-        host: 20.78.39.206
-        username: MBCcoin
-        password: tradingCoin123
+        host: ${{secrets.HOST_SECRETS}}
+        username: ${{secrets.USERNAME_SECRETS}}
+        password: ${{secrets.PASSWORD_SECRETS}}
         script: |
           sudo docker stop mbccoins-app-1 || true 
           sudo docker rm mbccoins-app-1 || true 
