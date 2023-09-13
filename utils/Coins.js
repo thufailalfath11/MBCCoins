@@ -1,6 +1,6 @@
 import React from 'react';
 import CoinItem from './CoinItem';
-import styles from './Styles.module.css';
+import styles from '../styles/Styles.module.css';
 import Link from 'next/link';
 
 const Coins = (props) => {

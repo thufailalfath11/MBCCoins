@@ -30,15 +30,15 @@ const Hero = () => {
             variants={motionVariants}
             ref={motionRef}
           >
-            <h1 className="hero-title">MBCXCYBER</h1>
+            <h1 className="hero-title">CRYPTOCURRENCY</h1>
           </motion.div>
           <div className="sub-heading">
-            {/* <motion.div
+            <motion.div
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={motionVariants}
               ref={motionRef}
-            > */}
+            />
             <TitleSm title="Multimedia" /> <span>.</span>
             <TitleSm title="Big Data" /> <span>.</span>
             <TitleSm title="Cybersecurity" />
