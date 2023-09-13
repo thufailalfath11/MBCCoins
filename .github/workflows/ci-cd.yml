@@ -30,4 +30,4 @@ jobs:
           sudo docker stop  mbccoins-app-1 || true 
           sudo docker rm  mbccoins-app-1 || true 
           sudo docker rmi mbccoins-app || true 
-          cd cd MBCCoins && git pull origin main && sudo docker compose up --build -d
+          cd MBCCoins && git pull origin main && sudo docker compose up --build -d
