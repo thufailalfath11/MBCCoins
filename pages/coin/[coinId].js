@@ -51,7 +51,7 @@ const Coin = ({ coin }) => {
             </div>
           </div>
         </div>
-       
+       <div className={styles.hide_mobile}>
         <div className={styles.content}>
         <div className={styles.timeRangeButtons}>
           <button onClick={() => setTimeRange('1d')}>1 Hari</button>
@@ -70,7 +70,7 @@ const Coin = ({ coin }) => {
             </LineChart>
           </ResponsiveContainer>
         </div>
-
+        </div>
         <div className={styles.content}>
           <table className={styles.table}>
             <thead>
