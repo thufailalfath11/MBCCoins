@@ -18,7 +18,7 @@ const Header = () => {
       <header>
         <div className='container'>
           <div className='logo'>
-            <Link href='/'>
+            <Link href='/beranda'>
               <TitleLogo title='MBC' caption='Coins' className='logomin' />
             </Link>
           </div>
