@@ -27,8 +27,6 @@ jobs:
         npm install
         npm run build
 
-<<<<<<< HEAD:.github/workflows/ci-cd.yml
-=======
     - name: Stop and Remove Previous Docker Container
       uses: appleboy/ssh-action@v1.0.0
       with:
@@ -41,4 +39,4 @@ jobs:
           sudo docker rmi mbccoins-app || true 
           cd /home/MBCcoin/newWeb/MBCCoins
           sudo git pull origin Master && sudo docker compose up --build -d
->>>>>>> 0b0841bfe301e5b5110ec4ba23d35271f31dcf43:.github/workflows/node.js.yml
+
