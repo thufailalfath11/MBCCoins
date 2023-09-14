@@ -26,16 +26,16 @@ const Header = () => {
             <Link href='/' className={activeLink == "/" ? "activeLink" : "none"}>
               Beranda
             </Link>
-            <Link href='/about' className={activeLink == "/about" ? "activeLink" : "none"}>
+            <Link href='/tentang' className={activeLink == "/tentang" ? "activeLink" : "none"}>
               Tentang
             </Link>
-            <Link href='/team' className={activeLink == "/team" ? "activeLink" : "none"}>
+            <Link href='/tim' className={activeLink == "/tim" ? "activeLink" : "none"}>
               Tim
             </Link>
-            <Link href='/analysis' className={activeLink == "/analysis" ? "activeLink" : "none"}>
+            <Link href='/analisis' className={activeLink == "/analisis" ? "activeLink" : "none"}>
               Analisis
             </Link>
-            <Link href='/contact' className={activeLink == "/contact" ? "activeLink" : "none"}>
+            <Link href='/kontak' className={activeLink == "/kontak" ? "activeLink" : "none"}>
               Kontak
             </Link>
             
