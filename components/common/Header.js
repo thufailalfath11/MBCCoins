@@ -23,12 +23,12 @@ const Header = () => {
             </Link>
           </div>
           <nav className={open ? "openMenu" : "closeMenu"} onClick={() => setOpen(null)}>
-            <Link href='/' className={activeLink == "/" ? "activeLink" : "none"}>
+            <Link href='/beranda' className={activeLink == "/beranda" ? "activeLink" : "none"}>
               Beranda
             </Link>
             <Link href='/tentang' className={activeLink == "/tentang" ? "activeLink" : "none"}>
               Tentang
-            </Link>
+            </Link> 
             <Link href='/tim' className={activeLink == "/tim" ? "activeLink" : "none"}>
               Tim
             </Link>

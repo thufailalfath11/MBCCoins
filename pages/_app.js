@@ -4,10 +4,11 @@ import "@/styles/main.scss";
 
 export default function App({ Component, pageProps }) {
   return (
-    <AuthProvider>
-      <Layout>
+ 
+      <AuthProvider>
         <Component {...pageProps} />
-      </Layout>
       </AuthProvider>
+  
+
   );
 }
