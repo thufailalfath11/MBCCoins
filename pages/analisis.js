@@ -1,4 +1,5 @@
 
+import Layout from "@/components/common/Layout"
 import Analysis from "@/sections/Analisis"
 import Head from "next/head"
 
@@ -8,7 +9,9 @@ const analysis = () => {
       <Head>
         <title>Analisis</title>
       </Head>
-      <Analysis />
+      <Layout>
+        <Analysis />
+      </Layout>
     </>
   )
 }

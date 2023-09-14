@@ -4,9 +4,10 @@ import styles from "./Login.module.css";
 import { SubmitHandler, useForm } from "react-hook-form";
 import useAuth from "@/hooks/useAuth";
 
-export default function LoginPage() {
+ function LoginPage() {
   const [login, setLogin] = useState(false)
   const {signIn,signUp} = useAuth() 
+
   const {
     register,
     handleSubmit,
@@ -35,22 +36,22 @@ export default function LoginPage() {
                 className={styles.input}
                 {...register("email", { required: true })}
               />
-              {errors.email && <h5>Di isi dulu bro....</h5>}
+              {errors.email && <h7>Di isi dulu bro....</h7>}
             </label>
             <label className={styles.label}>
               <input
                 type="password"
                 placeholder="Password"
                 className={styles.input}
-                {...register("password", { required: true })}
+                {...register('password', { required: true })}
               />
-              {errors.password && <h5>Di isi dulu bro....</h5>}
+              {errors.password && <h7>Di isi dulu bro....</h7>}
             </label>
-            <button className={styles.button} type="submit" onClick={() => setLogin()}>
+            <button className={styles.button} onClick={() => setLogin(true)}>
               Masuk
             </button>
             <div>
-              <button className={styles.button}>
+              <button className={styles.button} type="submit" onClick={() => setLogin(false)}>
                 Buat Akun
                 </button>
             </div>
@@ -60,3 +61,4 @@ export default function LoginPage() {
     </div>
   );
 }
+export default LoginPage;

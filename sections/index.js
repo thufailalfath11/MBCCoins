@@ -1,8 +1,8 @@
+import LoginPage from "@/components/LoginPage"
 import Hero from "./Hero"
 import Agency from "./Tentang"
-
 import Team from "./Tim"
 import Blog from "./Analisis"
 import Contact from "./Kontak"
 
-export { Hero, Agency, Team,  Blog, Contact }
+export { LoginPage, Hero, Agency, Team,  Blog, Contact }
