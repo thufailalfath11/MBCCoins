@@ -6,7 +6,7 @@ const team = () => {
   return (
     <>
       <Head>
-        <title>Team - MBCCoins</title>
+        <title>Tim - MBCCoins</title>
       </Head>
       <Team />
     </>

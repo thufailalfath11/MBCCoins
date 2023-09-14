@@ -1,11 +1,11 @@
-import About from "@/sections/About"
+import About from "@/sections/Tentang"
 import Head from "next/head"
 
 const AboutPage = () => {
   return (
     <>
       <Head>
-        <title>About Cryptocurrency</title>
+        <title>Tentang Cryptocurrency</title>
       </Head>
       <About />
     </>

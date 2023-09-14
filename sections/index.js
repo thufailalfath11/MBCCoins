@@ -1,8 +1,8 @@
 import Hero from "./Hero"
-import Agency from "./About"
-import ShowCase from "./ShowCase"
-import Team from "./Team"
-import Blog from "./Analysis"
-import Contact from "./Contact"
+import Agency from "./Tentang"
 
-export { Hero, Agency, Team, ShowCase, Blog, Contact }
+import Team from "./Tim"
+import Blog from "./Analisis"
+import Contact from "./Kontak"
+
+export { Hero, Agency, Team,  Blog, Contact }

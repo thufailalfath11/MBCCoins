@@ -1,5 +1,5 @@
 import { Hero } from "@/sections"
-import Table from "@/utils/Table"
+import Table from "@/pages/utils/Table"
 import Head from "next/head"
 
 export default function Home() {

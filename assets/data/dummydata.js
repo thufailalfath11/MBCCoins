@@ -184,7 +184,7 @@ export const teamdata2 = [
   {
     id: 8,
     title: "Fahmi",
-    cover: "../images/fahmi.png",
+    cover: "../images/Fahmi.png",
   },
   {
     id: 9,

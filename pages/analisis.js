@@ -1,12 +1,12 @@
 
-import Analysis from "@/sections/Analysis"
+import Analysis from "@/sections/Analisis"
 import Head from "next/head"
 
 const analysis = () => {
   return (
     <>
       <Head>
-        <title>Analysis</title>
+        <title>Analisis</title>
       </Head>
       <Analysis />
     </>

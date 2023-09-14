@@ -24,23 +24,22 @@ const Header = () => {
           </div>
           <nav className={open ? "openMenu" : "closeMenu"} onClick={() => setOpen(null)}>
             <Link href='/' className={activeLink == "/" ? "activeLink" : "none"}>
-              Home
+              Beranda
             </Link>
-            <Link href='/about' className={activeLink == "/about" ? "activeLink" : "none"}>
-              About
+            <Link href='/tentang' className={activeLink == "/tentang" ? "activeLink" : "none"}>
+              Tentang
             </Link>
-            <Link href='/team' className={activeLink == "/team" ? "activeLink" : "none"}>
-              Team
+            <Link href='/tim' className={activeLink == "/tim" ? "activeLink" : "none"}>
+              Tim
             </Link>
-            <Link href='/analysis' className={activeLink == "/analysis" ? "activeLink" : "none"}>
-              Analysis
+            <Link href='/analisis' className={activeLink == "/analisis" ? "activeLink" : "none"}>
+              Analisis
             </Link>
-            <Link href='/contact' className={activeLink == "/contact" ? "activeLink" : "none"}>
-              Contact
+            <Link href='/kontak' className={activeLink == "/kontak" ? "activeLink" : "none"}>
+              Kontak
             </Link>
-            <Link href='/showcase' className={activeLink == "/showcase" ? "activeLink" : "none"}>
-            </Link>
-            <button className='button-primary'>Log out</button>
+            
+            <button className='button-primary'>Keluar</button>
           </nav>
           <button onClick={() => setOpen(!open)}>{open ? <AiOutlineClose size={25} /> : <RiMenu4Line size={25} />}</button>
         </div>

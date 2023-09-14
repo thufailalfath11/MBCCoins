@@ -13,7 +13,7 @@ const Banner = () => {
             <br></br>
           </div>
           <div>
-            <button className="button-primary">Request a call-back</button>
+            <button className="button-primary">Meminta panggilan balik </button>
           </div>
         </div>
       </section>

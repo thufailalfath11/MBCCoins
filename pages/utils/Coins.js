@@ -1,9 +1,11 @@
 import React from 'react';
 import CoinItem from './CoinItem';
-import styles from './Styles.module.css';
+import styles from "../../styles/Styles.module.css";
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Coins = (props) => {
+  const router = useRouter();
   return (
     <div className={styles.container}>
       <div>
@@ -16,7 +18,7 @@ const Coins = (props) => {
           <p className={styles.hide_mobile}>Market Cap</p>
         </div>
         {props.coins.map((coin) => (
-          <Link href={`/coin/${coin.id}`} key={coin.id}>
+          <Link href={`/coin/${coin.id}`}>
               <CoinItem coins={coin} />
           </Link>
         ))}

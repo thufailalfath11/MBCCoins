@@ -1,13 +1,9 @@
-import { home } from "@/assets/data/dummydata";
-import Banner from "@/components/Banner";
+
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Coins from "@/components/Coins";
-import Expertise from "@/components/Expertise";
-import ShowCase from "@/components/ShowCase";
-import Testimonial from "@/components/Testimonial";
-import { Title, TitleLogo, TitleSm } from "@/components/common/Title";
-import { BlogCard, Brand } from "@/components/router";
+
+import { TitleLogo, TitleSm } from "@/components/common/Title";
+
 import React, { useRef } from "react";
 
 const Hero = () => {
@@ -37,12 +33,12 @@ const Hero = () => {
             <h1 className="hero-title">CRYPTOCURRENCY</h1>
           </motion.div>
           <div className="sub-heading">
-            {/* <motion.div
+            <motion.div
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={motionVariants}
               ref={motionRef}
-            > */}
+            />
             <TitleSm title="Multimedia" /> <span>.</span>
             <TitleSm title="Big Data" /> <span>.</span>
             <TitleSm title="Cybersecurity" />

@@ -1,77 +1,5 @@
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon {
-    font-size: 2rem;
-    color: #4deea3;
-}
-
-.purple {
-    color: #4deea3;
-}
-.container {
-    max-width: 1140px;
-    margin: auto;
-}
-
-.heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #26272b;
-    box-shadow: 0px 0px 12px #18191b;
-    border-radius: 8px;
-    margin: 2rem 1rem;
-    padding: .7rem 1rem;
-    font-weight: 700;
-}
-
-.coin_name {
-    margin-left: -4rem;
-}
-
-.coin_row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #26272b;
-    box-shadow: 0px 0px 12px #18191b;
-    border-radius: 8px;
-    margin: 2rem 1rem;
-    padding: .7rem 1rem;
-}
-
-.coin_row:hover {
-    transform: scale(1.04);
-    transition: .3s ease-in-out;
-    cursor: pointer;
-}
-
-.img {
-    height: 40px;
-    margin-right: 8px;
-    width: auto;
-}
-
-.imgSymbol {
-    display: flex;
-    align-items: center;
-}
-
-
-
-@media screen and (max-width: 720px) {
-    .hide_mobile {
-        display: none;
-    }
-}
-
-/* coin.js */
-.coin-container .content {
-    max-width: 740px;
+.coin_container .content {
+    max-width: 1080px;
     margin: 1rem auto;
     padding: .7rem 1rem;
     display: flex;
@@ -81,11 +9,16 @@
     border-radius: 8px;
 }
 
+.name {
+    color: #4deea3;
+    align-items: center;
+}
+
 .rank {
     margin: .5 0;
 }
 
-.rank-btn {
+.rank_btn {
     border: 1px solid #6900ff;
     box-shadow: 0px 0px 8px #6900ff;
     background-color: #6900ff;
@@ -98,19 +31,20 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
-.info .coin-heading {
+.info .coin_heading {
     display: flex;
     align-items: center;
     margin: 1rem 0;
+    gap: 10px;
 }
 
-.info .coin-price {
+.info .coin_price {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.info p {
+.info  {
     padding-right: 1rem;
 }
 
@@ -163,21 +97,42 @@
 
     .td {
         padding: 3px;
+        
     }
 
     .rank {
         margin: .5rem;
     }
 
-    .rank-btn {
+    .rank_btn {
         margin: .5rem 0;
     }
 }
 
 
+.chart_container {
+    width: 100%;
+    max-width: 800px; /* Sesuaikan lebar sesuai kebutuhan Anda */
+    margin: 0 auto;
+  }
+  
 
+  .timeRangeButtons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .timeRangeButtons button {
+    background-color: #4deea3;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 20px;
+  }
 
-
-
-
-
+  .timeRangeButtons button:hover {
+    background-color: #00ff88;
+  }
