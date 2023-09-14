@@ -127,7 +127,7 @@ const Coin = ({ coin }) => {
 
         <div className={styles.content}>
           <div className={styles.about}>
-            <h3>About {coin.name}</h3>
+            <h3>Tentang {coin.name}</h3>
             <p dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(coin.description ? coin.description.en : ''),
             }}>

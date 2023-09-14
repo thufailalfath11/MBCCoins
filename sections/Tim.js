@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { teamdata1, teamdata2 } from '@/assets/data/dummydata'; 
 import { Card } from '@/components/common/Card';
-import { Title, TitleSm, TitleLogo } from '@/components/common/Title';
+import { TitleSm, TitleLogo } from '@/components/common/Title';
 
 const Team = () => {
   const [bagiancs, inView1] = useInView({triggerOnce: true}); 

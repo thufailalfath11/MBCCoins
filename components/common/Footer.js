@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { TitleLogo } from "./Title"
-import { BsFacebook, BsLine } from "react-icons/bs"
-import { AiFillAlert, AiFillBehanceCircle, AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai"
+import { BsLine } from "react-icons/bs"
+import { AiFillAlert, AiFillGithub, AiFillInstagram } from "react-icons/ai"
 
 const Footer = () => {
   return (
@@ -13,37 +13,37 @@ const Footer = () => {
               <TitleLogo title='MBC' caption='Coins' className='logobg' />
               <br />
               <span>
-                Questions? Reach us <br /> Monday – Friday from 9 am to 6 pm
+              Pertanyaan? Hubungi kami <br />  Senin – Jumat mulai jam 9 pagi hingga 6 sore
               </span>
               <br />
               <br />
               <h3>Line @sok8073r</h3>
               <br />
-              <button className='button-primary'>Request for quote</button>
+              <button className='button-primary'>Permintaan Untuk Kutipan </button>
             </div>
             <ul>
-              <h3>COMPANY</h3>
+              <h3>Perusahaan   </h3>
               <li>
-                <Link href='/'>Home</Link>
+                <Link href='/'>Beranda</Link>
               </li>
               <li>
-                <Link href='/about'>About</Link>
+                <Link href='/about'>Tentang</Link>
               </li>
               <li>
-                <Link href='/team'>Team</Link>
+                <Link href='/team'>Tim</Link>
               </li>
               <li>
-                <Link href='/analysis'>Analysis</Link>
+                <Link href='/analysis'>Analisis</Link>
               </li>
               <li>
-                <Link href='/contact'>Contact</Link>
+                <Link href='/contact'>Kontak</Link>
               </li>
               <li>
-                <Link href='/'>Log out</Link>
+                <Link href='/'>Keluar   </Link>
               </li>
             </ul>
             <ul>
-              <h3>CONNECT</h3>
+              <h3>Hubungi Kami  </h3>
               <div className='connect'>
                 <li>
                   <Link href='https://liff.line.me/1645278921-kWRPP32q/?accountId=sok8073r'>
@@ -70,12 +70,12 @@ const Footer = () => {
           </div>
           <div className='legal connect py'>
             <div className='text'>
-              <span>© 2023 THE SEVEN. ALL RIGHTS RESERVED.</span>
+              <span>© 2023 MBCcoins. SELURUH HAK CIPTA.</span>
             </div>
             <div className='connect'>
-              <span>GORKCODER COMPANY</span>
+              <span>PERUSAHAAN MBCcoins</span>
               <span> &nbsp; | &nbsp; </span>
-              <span>TERMS & CONDITIONS</span>
+              <span>SYARAT & KETENTUAN</span>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import { Title, TitleLogo, TitleSm } from "@/components/common/Title";
+import { TitleLogo, TitleSm } from "@/components/common/Title";
 
 import React, { useRef } from "react";
 

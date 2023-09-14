@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { TitleLogo } from "./common/Title";
 import styles from "./Login.module.css";
-import { useForm } from "react-hook-form";
-import useAuth from "@/hooks/useAuth";
+import { SubmitHandler, useForm } from "react-hook-form";
 
 export default function LoginPage() {
   const [login, setLogin] = useState(false)
@@ -26,7 +25,7 @@ export default function LoginPage() {
       <TitleLogo caption="Coins" title="MBC" className="logobg" />
       <div className={styles.kotak}>
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-          <h1 className={styles.h1}>Sign In</h1>
+          <h1 className={styles.h1}>Masuk</h1>
           <div>
             <label className={styles.label}>
               <input
@@ -46,11 +45,11 @@ export default function LoginPage() {
               />
               {errors.password && <h5>Di isi dulu bro....</h5>}
             </label>
-            <button className={styles.button} onClick={() => setLogin(true)}>
+            <button className={styles.button} type="submit" onClick={() => setLogin()}>
               Sign In
             </button>
             <div>
-              <button className={styles.button} type="submit" onClick={() => setLogin(false)}>
+              <button className={styles.button}>
                 Create Account
                 </button>
             </div>

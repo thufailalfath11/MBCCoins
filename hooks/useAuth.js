@@ -49,7 +49,7 @@ import { useRouter } from 'next/router';
       await createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setUser(userCredential.user)
-        router.push('/login')
+        router.push('/home')
         setLoading(false)
       })
       .catch((error) => alert(error.message))

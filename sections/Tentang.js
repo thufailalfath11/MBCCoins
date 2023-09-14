@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion'; 
 import { useInView } from 'react-intersection-observer';
-import { Title, TitleLogo, TitleSm } from "@/components/common/Title";
+import { TitleLogo, TitleSm } from "@/components/common/Title";
 
 const About = () => {
   const [inView, ref] = useInView({ triggerOnce: true });
