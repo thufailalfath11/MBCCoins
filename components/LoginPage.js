@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TitleLogo } from "./common/Title";
 import styles from "./Login.module.css";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 export default function LoginPage() {
   const {
@@ -23,7 +23,7 @@ export default function LoginPage() {
       <TitleLogo caption="Coins" title="MBC" className="logobg" />
       <div className={styles.kotak}>
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-          <h1 className={styles.h1}>Sign In</h1>
+          <h1 className={styles.h1}>Masuk</h1>
           <div>
             <label className={styles.label}>
               <input
@@ -44,11 +44,11 @@ export default function LoginPage() {
               {errors.password && <h5>Di isi dulu bro....</h5>}
             </label>
             <button className={styles.button} type="submit" onClick={() => setLogin()}>
-              Sign In
+                Masuk
             </button>
             <div>
               <button className={styles.button}>
-                Create Account
+                Buat Akun
                 </button>
             </div>
           </div>

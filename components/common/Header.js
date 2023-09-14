@@ -24,22 +24,22 @@ const Header = () => {
           </div>
           <nav className={open ? "openMenu" : "closeMenu"} onClick={() => setOpen(null)}>
             <Link href='/' className={activeLink == "/" ? "activeLink" : "none"}>
-              Home
+              Beranda
             </Link>
             <Link href='/about' className={activeLink == "/about" ? "activeLink" : "none"}>
-              About
+              Tentang
             </Link>
             <Link href='/team' className={activeLink == "/team" ? "activeLink" : "none"}>
-              Team
+              Tim
             </Link>
             <Link href='/analysis' className={activeLink == "/analysis" ? "activeLink" : "none"}>
-              Analysis
+              Analisis
             </Link>
             <Link href='/contact' className={activeLink == "/contact" ? "activeLink" : "none"}>
-              Contact
+              Kontak
             </Link>
             
-            <button className='button-primary'>Log out</button>
+            <button className='button-primary'>Keluar</button>
           </nav>
           <button onClick={() => setOpen(!open)}>{open ? <AiOutlineClose size={25} /> : <RiMenu4Line size={25} />}</button>
         </div>
