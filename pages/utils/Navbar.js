@@ -1,6 +1,6 @@
 import React from 'react'
 import {FaCoins} from 'react-icons/fa'
-import styles from '../styles/Styles.module.css'
+import styles from "../../styles/Styles.module.css";
 import Link from 'next/link'
 
 const Navbar = () => {

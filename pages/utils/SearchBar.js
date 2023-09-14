@@ -1,6 +1,6 @@
 // SearchBar.js
 import React, { useState } from 'react';
-import styles from '../styles/Styles.module.css'; // Import file CSS terpisah
+import styles from "../../styles/Styles.module.css";// Import file CSS terpisah
 
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
