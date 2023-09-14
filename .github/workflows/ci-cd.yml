@@ -24,16 +24,3 @@ jobs:
         npm install
         npm run build
 
-    - name: Stop and Remove Previous Docker Container
-      uses: appleboy/ssh-action@v1.0.0
-      with:
-        host: ${{secrets.HOST_SECRETS}}
-        username: ${{secrets.USERNAME_SECRETS}}
-        password: ${{secrets.PASSWORD_SECRETS}}
-        script: |
-          sudo docker stop mbccoins-app-1 || true 
-          sudo docker rm mbccoins-app-1 || true 
-          sudo docker rmi mbccoins-app || true 
-          cd /home/MBCcoin/MBCCoins
-          sudo git pull origin Develop && sudo docker compose up --build -d
-          
