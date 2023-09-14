@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { useRouter } from 'next/router';
 
 const CoinHistoryChart = () => {
   const [bitcoinPriceData, setBitcoinPriceData] = useState([]);
-  const { coinId } = context.query;
+  const router = useRouter();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://api.coingecko.com/api/v3/coins//market_chart', {
+        const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${router.query.coinId}/market_chart`, {
           params: {
             vs_currency: 'usd',
             days: 30,
@@ -28,7 +30,7 @@ const CoinHistoryChart = () => {
     };
 
     fetchData();
-  }, []);
+  }, [router.query.coinId]);
 
   return (
     <div>
@@ -46,6 +48,3 @@ const CoinHistoryChart = () => {
 };
 
 export default CoinHistoryChart;
-
-
-

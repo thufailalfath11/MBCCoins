@@ -3,10 +3,12 @@ import axios from 'axios';
 import styles from './coinId.module.css';
 import DOMPurify from 'dompurify';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { useRouter } from 'next/router';
 
 const Coin = ({ coin }) => {
   const [bitcoinPriceData, setBitcoinPriceData] = useState([]);
   const [timeRange, setTimeRange] = useState('max');
+  const router = useRouter();
   const fetchBitcoinPriceData = async () => {
     try {
       const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${coin.id}/market_chart`, {
