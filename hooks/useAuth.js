@@ -6,7 +6,7 @@ import {
   } from 'firebase/auth';
   import { createContext, useContext, useEffect, useMemo, useState } from 'react';
   import { auth } from '../firebase';
-import { useRouter } from 'next/router';
+  import { useRouter } from 'next/router';
   
   const AuthContext = createContext({
     user: null,
@@ -29,7 +29,6 @@ import { useRouter } from 'next/router';
         if (user) {
           // Logged in...
           setUser(user);
-
           setLoading(false);
         } else {
           // Not logged in...
@@ -56,6 +55,7 @@ import { useRouter } from 'next/router';
       .finally(() => setLoading(false))
     };
   
+
     const signIn = async (email, password) => {
       setLoading(true);
   
@@ -63,7 +63,7 @@ import { useRouter } from 'next/router';
     await signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       setUser(userCredential.user)
-      router.push('/')
+      router.push('/beranda')
       setLoading(false)
     })
     .catch((error) => alert(error.message))
@@ -73,7 +73,7 @@ import { useRouter } from 'next/router';
     const logout = async () => {
       setLoading(true);
   
-      ignOut(auth)
+      signOut(auth)
       .then(() => {
         setUser(null)
       })
