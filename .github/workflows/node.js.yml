@@ -3,7 +3,7 @@ name: Node.js CI and Deploy
 on:
   push:
     branches:
-      - Develop
+      - Master
 
 jobs:
   build-and-deploy:
