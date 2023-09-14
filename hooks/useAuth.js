@@ -35,7 +35,7 @@ import { useRouter } from 'next/router';
           // Not logged in...
           setUser(null);
           setLoading(true);
-          router.push('/login')
+          router.push('/')
         }
         setInitialLoading(false);
       });
@@ -49,7 +49,7 @@ import { useRouter } from 'next/router';
       await createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setUser(userCredential.user)
-        router.push('/home')
+        router.push('/')
         setLoading(false)
       })
       .catch((error) => alert(error.message))
