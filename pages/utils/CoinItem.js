@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "../../styles/Styles.module.css";
+import { useRouter } from 'next/router';
 
 const CoinItem = (props) => {
+  const router = useRouter();
   return (
     <div className={styles.coin_row}>
       <p>{props.coins.market_cap_rank}</p>

@@ -2,8 +2,10 @@ import React from 'react';
 import CoinItem from './CoinItem';
 import styles from "../../styles/Styles.module.css";
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Coins = (props) => {
+  const router = useRouter();
   return (
     <div className={styles.container}>
       <div>
