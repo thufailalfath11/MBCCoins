@@ -46,11 +46,11 @@ export default function LoginPage() {
               {errors.password && <h5>Di isi dulu bro....</h5>}
             </label>
             <button className={styles.button} type="submit" onClick={() => setLogin()}>
-              Sign In
+              Masuk
             </button>
             <div>
               <button className={styles.button}>
-                Create Account
+                Buat Akun
                 </button>
             </div>
           </div>
