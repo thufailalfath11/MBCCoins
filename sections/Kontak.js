@@ -16,7 +16,7 @@ const Contact = () => {
 
   const motionVariantsA = {
     hidden: { opacity: 0, z: -100 },
-    visible: { opacity: 1, z: 0, transition: { duration: 2 } },
+    visible: { opacity: 1, z: 0, transition: { duration: 3 } },
   };
 
   const handleResize = () => {
