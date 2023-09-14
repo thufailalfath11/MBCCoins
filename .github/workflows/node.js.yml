@@ -36,4 +36,3 @@ jobs:
           sudo docker rmi mbccoins-app || true 
           cd /home/MBCcoin/newWeb/MBCCoins
           sudo git pull origin Master && sudo docker compose up --build -d
-          
