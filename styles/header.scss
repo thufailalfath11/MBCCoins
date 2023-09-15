@@ -54,10 +54,22 @@ header {
     .button-primary {
       display: none;
     }
-  }
-  .activeLink {
+      }
+    .activeLink {
     &::after {
       display: none;
     }
   }
 }
+.button-coin{
+    background-color: aquamarine;
+    justify-content: center;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0,3 ease;
+    &:hover {
+      background-color: #2980b9;
+    }
+  }

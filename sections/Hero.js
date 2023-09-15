@@ -58,16 +58,7 @@ const Hero = () => {
               cryptocurrency, Anda memerlukan dompet cryptocurrency.
             </p>
           </div>
-          {/* <Coins />
-          <div className="hero-content grid-4">
-            {home.map((item, i) => (
-              <div className="box" key={i}>
-                <span className="green">{item.icon}</span> <br />
-                <br />
-                <h3>{item.title}</h3>
-              </div>
-            ))} */}
-          {/* </div> */}
+          
         </div>
       </section>
     </>
