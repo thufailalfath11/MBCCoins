@@ -101,14 +101,19 @@ import {
     const signUp = async (email, password) => {
       setLoading(true);
   
-      await createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        setUser(userCredential.user)
-        router.push('/')
+      try {
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        setUser(userCredential.user);
+        router.push('/');
         setLoading(false)
-      })
-      .catch((error) => alert(error.message))
-      .finally(() => setLoading(false))
+        alert('Pembuatan akun berhasil! Silakan Masuk...');
+      } catch (error) {
+        setError(error);
+        console.error('Error signing up:', error);
+        alert(error.message);
+      } finally {
+        setLoading(false);
+      }
     };
   
 
@@ -131,6 +136,7 @@ import {
   
       signOut(auth)
       .then(() => {
+        setLoading(true)
         setUser(null)
       })
       .catch((error) => alert(error.message))

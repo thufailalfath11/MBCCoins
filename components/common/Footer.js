@@ -2,8 +2,19 @@ import Link from "next/link"
 import { TitleLogo } from "./Title"
 import { BsLine } from "react-icons/bs"
 import { AiFillAlert, AiFillGithub, AiFillInstagram } from "react-icons/ai"
-
+import useAuth from "@/hooks/useAuth"
 const Footer = () => {
+  const { logout } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      
+      setLogoutMessage('Selamat Berjumpa Kembali!');
+    } catch (error) {
+      console.error('Error logging out:', error);
+    }
+  };
   return (
     <>
       <footer>
@@ -38,7 +49,7 @@ const Footer = () => {
                 <Link href='/kontak'>Kontak</Link>
               </li>
               <li>
-                <Link href='/'>Keluar   </Link>
+                <Link onClick={handleLogout} href="#">Keluar   </Link>
               </li>
             </ul>
             <ul>

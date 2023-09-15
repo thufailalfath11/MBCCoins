@@ -4,10 +4,21 @@ import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import { RiMenu4Line } from "react-icons/ri"
 import { AiOutlineClose } from "react-icons/ai"
-
+import React from "react"
+import useAuth from "@/hooks/useAuth"
 const Header = () => {
   const [activeLink, setActiveLink] = useState("")
   const [open, setOpen] = useState(false)
+
+  const { logout } = useAuth();
+  
+  const handleLogout = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      console.error('Error logging out:', error);
+    }
+  };
 
   const router = useRouter()
   useEffect(() => {
@@ -39,7 +50,7 @@ const Header = () => {
               Kontak
             </Link>
             
-            <button className='button-primary'>Keluar</button>
+            <button onClick={handleLogout} className='button-primary'>Keluar</button>
           </nav>
           <button onClick={() => setOpen(!open)}>{open ? <AiOutlineClose size={25} /> : <RiMenu4Line size={25} />}</button>
         </div>
