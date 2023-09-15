@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
             <div className={styles.navbar}>
                 <FaCoins className={styles.icon} />
-                <h1> Coin <span className={styles.purple}>Lists</span></h1>
+                <h1> Coin <span className={styles.purple}>List</span></h1>
             </div>
     )
 }
