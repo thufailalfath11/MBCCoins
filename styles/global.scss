@@ -2,7 +2,11 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
+.bglogin{
+  background-image: url("../assets/images/art-top-cropp1.png");
+  background-size: cover;
+  background-position: center;
+}
 .hero {
   text-align: center;
   padding: $xl-6 0;

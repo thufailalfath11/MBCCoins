@@ -1,21 +1,23 @@
 import Link from "next/link";
-
-import React, { useState } from "react";
+import Image from "next/image"
+import React, { useState,useRef, useEffect } from "react";
 
 import { useForm } from "react-hook-form";
 import useAuth from "@/hooks/useAuth";
 import {
   FaFacebookF,
   FaGoogle,
-  FaLinkedin,
   FaRegEnvelope,
   FaGithub,
 } from "react-icons/fa";
 import { MdLockOutline } from "react-icons/md";
+import { TitleLogo } from "./common/Title";
 
 function LoginPage() {
   const [login, setLogin] = useState(false);
   const { signIn, signUp, signInWithFacebook,signInWithGoogle, signInWithGitHub } = useAuth();
+  const whiteBoxRef = useRef(null);
+  const greenBoxRef = useRef(null);
 
   const {
     register,
@@ -31,20 +33,29 @@ function LoginPage() {
     }
   };
 
+  useEffect(() => {
+    if (whiteBoxRef.current && greenBoxRef.current) {
+      const whiteBoxHeight = whiteBoxRef.current.clientHeight;
+      greenBoxRef.current.style.height = `${whiteBoxHeight}px`;
+    }
+  }, []);
+
   const handleFacebookLogin = () => {
     signInWithFacebook();
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
+    <div className="bglogin">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 " >
+       
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col items-center justify-center w-full flex-1 px-4 md:px-20 text-center"
       >
-        <div className="bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row w-full max-w-4xl">
-          <div className="w-full md:w-3/5 p-5">
-            <div className="text-left font-bold text-black-500">
-              <span className="text-green-500">Company</span>Name
+        <div className="bg-white rounded-2xl  shadow-2xl flex flex-col md:flex-row w-full max-w-4xl max-h-screen">
+          <div className="w-full md:w-3/5 p-5"  ref={whiteBoxRef}>
+            <div className="text-left font-bold text-black-500 " >
+              <TitleLogo caption="Coins" title="MBC" className="logomin text-black" />
             </div>
             <div className="py-10">
               <h2 className="text-3xl font-bold text-green-500 mb-2">
@@ -78,7 +89,7 @@ function LoginPage() {
                   <input
                     type="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder="contohtarmidi@gmail.com"
                     className="bg-gray-100 outline-none text-sm flex-1 text-black"
                     {...register("email", { required: true })}
                   />
@@ -91,7 +102,7 @@ function LoginPage() {
                   <input
                     type="password"
                     name="password"
-                    placeholder="Password"
+                    placeholder="contohPasword123"
                     className="bg-gray-100 outline-none text-sm flex-1 text-black"
                     {...register("password", { required: true })}
                   />
@@ -119,7 +130,7 @@ function LoginPage() {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-2/5 bg-green-500 text-white rounded-tr-2xl rounded-br-2xl py-6 md:py-36 px-4 md:px-12">
+          <div className="w-full md:w-2/5 bg-green-500 text-white rounded-tr-2xl rounded-br-2xl py-6 md:py-36 px-4 md:px-12 " ref={greenBoxRef}>
             <h2 className="text-3xl font-bold mb-2">Hello, Friend!</h2>
             <div className="border-2 w-20 border-white inline-block mb-2"></div>
             <p className="mb-10">
@@ -136,6 +147,7 @@ function LoginPage() {
           </div>
         </div>
       </form>
+    </div>
     </div>
   );
 }
