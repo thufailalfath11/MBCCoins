@@ -1,4 +1,5 @@
-import Layout from "@/components/common/Layout";
+
+
 import { AuthProvider } from "@/hooks/useAuth";
 import "@/styles/main.scss";
 
@@ -7,7 +8,7 @@ export default function App({ Component, pageProps }) {
  
       <AuthProvider>
         <Component {...pageProps} />
-      </AuthProvider>
+        </AuthProvider>
   
 
   );
