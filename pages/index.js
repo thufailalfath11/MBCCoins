@@ -1,8 +1,8 @@
 
-import Head from "next/head"
-import { AuthProvider } from "@/hooks/useAuth"
 import LoginPage from "@/components/LoginPage"
-import Layout from "@/components/common/Layout"
+import Loginpageeeeeee from "@/components/LoginPage"
+import Head from "next/head"
+
 
 export default function Home() {
   return (

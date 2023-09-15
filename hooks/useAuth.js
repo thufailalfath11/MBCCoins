@@ -2,12 +2,17 @@ import {
     createUserWithEmailAndPassword,
     onAuthStateChanged,
     signInWithEmailAndPassword,
+    FacebookAuthProvider,
     signOut,
+    signInWithPopup,
+    GoogleAuthProvider,
+    GithubAuthProvider
   } from 'firebase/auth';
   import { createContext, useContext, useEffect, useMemo, useState } from 'react';
   import { auth } from '../firebase';
   import { useRouter } from 'next/router';
-  
+
+
   const AuthContext = createContext({
     user: null,
     signUp: async () => {},
@@ -41,6 +46,57 @@ import {
   
       return () => unsubscribe();
     }, []);
+
+    const signInWithFacebook = async () => {
+      setLoading(true);
+  
+      const provider = new FacebookAuthProvider();
+  
+      try {
+        const userCredential = await signInWithPopup(auth, provider);
+        setUser(userCredential.user);
+        router.push('/beranda'); 
+      } catch (error) {
+        setError(error);
+        console.error('Error signing in with Facebook:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+  
+    const signInWithGoogle = async () => {
+      setLoading(true);
+    
+      const provider = new GoogleAuthProvider();
+    
+      try {
+        const userCredential = await signInWithPopup(auth, provider);
+        setUser(userCredential.user);
+        router.push('/beranda'); 
+      } catch (error) {
+        setError(error);
+        console.error('Error signing in with Google:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    const signInWithGitHub = async () => {
+      setLoading(true);
+    
+      const provider = new GithubAuthProvider();
+    
+      try {
+        const userCredential = await signInWithPopup(auth, provider);
+        setUser(userCredential.user);
+        router.push('/beranda'); 
+      } catch (error) {
+        setError(error);
+        console.error('Error signing in with GitHub:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
   
     const signUp = async (email, password) => {
       setLoading(true);
@@ -89,6 +145,9 @@ import {
         loading,
         logout,
         error,
+        signInWithFacebook,
+        signInWithGoogle,
+        signInWithGitHub,
       }),
       [user, loading]
     );
