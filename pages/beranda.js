@@ -12,7 +12,6 @@ const beranda = () => {
       </Head>
       <Layout>
         <Hero />
-        <Table />
       </Layout>
     </>
   );

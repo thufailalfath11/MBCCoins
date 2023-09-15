@@ -30,7 +30,7 @@ function Table() {
 
   return (
     <>
-      <Navbar />
+      
       <SearchBar onSearch={handleSearch} /> {/* Gunakan SearchBar di sini */}
       <Coins coins={filteredCoins.length > 0 ? filteredCoins : coins} />
     </>

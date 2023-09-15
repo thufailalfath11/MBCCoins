@@ -61,15 +61,17 @@ header {
     }
   }
 }
-.button-coin{
-    background-color: aquamarine;
-    justify-content: center;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: background-color 0,3 ease;
-    &:hover {
-      background-color: #2980b9;
-    }
+.button-coin {
+  background-color:rgb(5, 228, 154);
+  justify-content: center;
+  align-items: center;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-bottom: 50px; /* Menambahkan margin bawah 20px */
+  &:hover {
+    background-color: #01ff6b;
   }
+}
