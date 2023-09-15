@@ -1,5 +1,3 @@
-
-
 import { AuthProvider } from "@/hooks/useAuth";
 import "@/styles/main.scss";
 

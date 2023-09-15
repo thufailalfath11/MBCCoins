@@ -1,4 +1,3 @@
-
 import Layout from "@/components/common/Layout"
 import Analysis from "@/sections/Analisis"
 import Head from "next/head"

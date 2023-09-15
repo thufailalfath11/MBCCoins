@@ -1,4 +1,3 @@
-import LoginPage from "@/components/LoginPage";
 import { Hero, Team } from "@/sections";
 import Head from "next/head";
 import React from "react";

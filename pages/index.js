@@ -1,6 +1,4 @@
-
 import LoginPage from "@/components/LoginPage"
-import Loginpageeeeeee from "@/components/LoginPage"
 import Head from "next/head"
 
 

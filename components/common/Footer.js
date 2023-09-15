@@ -19,24 +19,23 @@ const Footer = () => {
               <br />
               <h3>Line @sok8073r</h3>
               <br />
-              <button className='button-primary'>Permintaan Untuk Kutipan </button>
             </div>
             <ul>
               <h3>Perusahaan   </h3>
               <li>
-                <Link href='/'>Beranda</Link>
+                <Link href='/beranda'>Beranda</Link>
               </li>
               <li>
-                <Link href='/about'>Tentang</Link>
+                <Link href='/tentang'>Tentang</Link>
               </li>
               <li>
-                <Link href='/team'>Tim</Link>
+                <Link href='/tim'>Tim</Link>
               </li>
               <li>
-                <Link href='/analysis'>Analisis</Link>
+                <Link href='/analisis'>Analisis</Link>
               </li>
               <li>
-                <Link href='/contact'>Kontak</Link>
+                <Link href='/kontak'>Kontak</Link>
               </li>
               <li>
                 <Link href='/'>Keluar   </Link>
