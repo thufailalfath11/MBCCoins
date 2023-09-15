@@ -132,7 +132,7 @@ function LoginPage() {
               className="w-full md:w-2/5 bg-green-500 text-white rounded-tr-2xl rounded-br-2xl py-6 md:py-36 px-4 md:px-12 "
               ref={greenBoxRef}
             >
-              <h2 className="text-3xl font-bold mb-2">Hello, Sobat MBCcoins! </h2>
+              <h2 className="text-3xl font-bold mb-2">Halo, Sobat MBCcoins! </h2>
               <div className="border-2 w-20 border-white inline-block mb-2"></div>
               <p className="mb-10">
               Isi informasi pribadi untuk memulai perjalanan bersama kami

@@ -2,12 +2,14 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion'; 
 import { useInView } from 'react-intersection-observer';
 import { TitleLogo, TitleSm } from "@/components/common/Title";
-import { AiFillBehanceCircle, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { BiUserCircle } from "react-icons/bi";
 import { BsFacebook } from "react-icons/bs";
 import { FiHeadphones, FiHelpCircle } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
 import styles from "../styles/Styles.module.css"
+import Link from "next/link"
+import { BsLine } from "react-icons/bs"
 
 const Contact = () => {
   const [inView, ref] = useInView({ triggerOnce: true });
@@ -79,16 +81,24 @@ const Contact = () => {
               </div>
               <ul>
                 <li className='icon'>
-                  <BsFacebook size={25} />
+                <Link href='https://liff.line.me/1645278921-kWRPP32q/?accountId=sok8073r'>
+                    <BsLine size={25} />
+                  </Link>
                 </li>
                 <li className='icon'>
-                  <AiFillBehanceCircle size={25} />
+                  <Link href='https://github.com/thufailalfath11/MBCcoins_Website.git'>
+                    <AiFillGithub size={25} />
+                  </Link>
                 </li>
                 <li className='icon'>
-                  <AiFillInstagram size={25} />
+                <Link href='https://www.instagram.com/mbclab/?hl=id'>
+                    <AiFillInstagram size={25} />
+                  </Link>
                 </li>
                 <li className='icon'>
-                  <AiFillLinkedin size={25} />
+                <Link href=' https://www.linkedin.com/company/mbclaboratory/?hl=id'>
+                    <AiFillLinkedin size={25} />
+                  </Link>
                 </li>
               </ul>
             </div>
