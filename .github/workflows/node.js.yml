@@ -3,10 +3,10 @@ name: Node.js CI and Deploy
 on:
   push:
     branches:
-      - Master
+      
   pull_request:
     branches:
-      - Master
+      
 
 jobs:
   build-and-deploy:
@@ -37,6 +37,6 @@ jobs:
           sudo docker stop mbccoins-app-1 || true 
           sudo docker rm mbccoins-app-1 || true 
           sudo docker rmi mbccoins-app || true 
-          cd /home/MBCcoin/newWeb/MBCCoins
+          cd /home/pabanasuryp/website/MBCCoins
           sudo git pull origin Master && sudo docker compose up --build -d
 
