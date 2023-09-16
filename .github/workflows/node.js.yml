@@ -6,7 +6,7 @@ on:
       - Master
   pull_request:
     branches:
-      
+      - Master
 
 jobs:
   build-and-deploy:
@@ -22,13 +22,21 @@ jobs:
       with:
         node-version: '18.17.1'
 
+    - name: Build
+      run: | 
+        npm install
+        npm run build
 
     - name: Stop and Remove Previous Docker Container
       uses: appleboy/ssh-action@v1.0.0
       with:
         key : ${{ secrets.SSH_SECRETS }}
-        username: pabanasuryp
-        host: ${{secrets.HOST_SECRETS}}
-        script: sudo mkdir new-test
-          
+        host: ${{ secrets.HOST_SECRETS }}
+        username: ${{ secrets.USERNAME_SECRETS }}
+        script: |
+          sudo docker stop mbccoins-app-1 || true 
+          sudo docker rm mbccoins-app-1 || true 
+          sudo docker rmi mbccoins-app || true 
+          cd /home/pabanasuryp/website/MBCCoins
+          sudo git pull origin Master && sudo docker compose up --build -d
 
